@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
-    "@titleiq/shared": "*",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
