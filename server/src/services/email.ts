@@ -50,7 +50,7 @@ export async function sendWelcomeEmail(email: string) {
   }
 
   try {
-    await resend.emails.send({
+    await getResend().emails.send({
       from: 'TitleIQ <onboarding@resend.dev>',
       to: email,
       subject: 'Welcome to TitleIQ!',

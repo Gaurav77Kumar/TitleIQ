@@ -26,7 +26,7 @@ router.post('/', authenticate, requirePro, async (req: AuthenticatedRequest, res
   if (!validation.success) {
     return res.status(400).json({ 
       success: false, 
-      error: validation.error.errors[0].message 
+      error: validation.error.issues[0].message 
     });
   }
 
