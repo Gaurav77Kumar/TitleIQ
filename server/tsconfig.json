@@ -4,11 +4,11 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "module": "ESNext",
-    "moduleResolution": "bundler",
-    "types": ["node"]
+    "moduleResolution": "node",
+    "types": ["node"],
+    "paths": {
+      "@titleiq/shared": ["../shared/dist/index.d.ts"]
+    }
   },
-  "include": ["src"],
-  "references": [
-    { "path": "../shared" }
-  ]
+  "include": ["src"]
 }
