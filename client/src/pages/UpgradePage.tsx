@@ -65,7 +65,7 @@ export const UpgradePage = () => {
         handler: async (response: any) => {
           try {
             // 4. Verify payment signature on backend
-            const verifyRes = await api.post('/billing/verify-payment', {
+            const verifyRes = await api.post<{ success: boolean }>('/billing/verify-payment', {
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_order_id: response.razorpay_order_id,
               razorpay_signature: response.razorpay_signature,

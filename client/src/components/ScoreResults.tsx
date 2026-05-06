@@ -139,7 +139,7 @@ export const ScoreResults: React.FC<ScoreResultsProps> = ({
             <SubScoreBar label="Curiosity Gap" score={result.sub_scores.curiosity_gap} index={0} />
             <SubScoreBar label="Keyword Strength" score={result.sub_scores.keyword_strength} index={1} />
             <SubScoreBar label="Emotional Pull" score={result.sub_scores.emotional_pull} index={2} />
-            <SubScoreBar label="Title Length" score={result.sub_scores.title_length} index={3} />
+            <SubScoreBar label="Title Length" score={result.sub_scores.length_score} index={3} />
           </div>
 
           {/* ─── C) STRENGTHS ─── */}

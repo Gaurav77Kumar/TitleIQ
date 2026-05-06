@@ -8,7 +8,9 @@ export type {
   SubScores,
   ThumbnailScoreResult,
   KeywordResult,
+  MissingKeyword,
   SimulationResult,
+  TitleRanking,
 } from './types/analysis';
 
 // API types

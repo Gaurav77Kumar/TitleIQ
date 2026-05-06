@@ -5,10 +5,10 @@
     "jsx": "react-jsx",
     "outDir": "./dist",
     "rootDir": "./src",
-    "noEmit": true
+    "noEmit": true,
+    "paths": {
+      "@titleiq/shared": ["../shared/dist/index.d.ts"]
+    }
   },
-  "include": ["src"],
-  "references": [
-    { "path": "../shared" }
-  ]
+  "include": ["src"]
 }
