@@ -21,10 +21,21 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(() => {
+const [user, setUser] = useState<User | null>(() => {
+  try {
     const saved = localStorage.getItem('titleiq_user');
-    return saved ? JSON.parse(saved) : null;
-  });
+
+    if (!saved || saved === 'undefined') {
+      return null;
+    }
+
+    return JSON.parse(saved);
+  } catch (err) {
+    console.error('Failed to parse stored user:', err);
+    localStorage.removeItem('titleiq_user');
+    return null;
+  }
+});
   const [isLoading, setIsLoading] = useState(false);
 
   // Check authentication status on mount
